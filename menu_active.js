@@ -75,6 +75,16 @@ $('header').removeClass('header-appear');
 }
 });
 
+// ______________fixing bottom nav to top on scrolliing
+var $fixednav = $(".bottom-nav");
+$(window).on("scroll", function () {
+var $heightcalc = $(window).height() - $fixednav.height();
+if ($(this).scrollTop() > $heightcalc) {
+$fixednav.addClass("navbar-bottom-top");
+} else {
+$fixednav.removeClass("navbar-bottom-top");
+}
+});
 
 
 /* ---------------------------------------------
